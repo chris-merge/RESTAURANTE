@@ -20,7 +20,7 @@
 		
 	<h1> Comida Rapida "EL CHOCOLOCO"</h1>
 	<!-- imagen de fondo -->
-	<img src="https://i.ibb.co/4NLdsks/Superfoods.jpg" alt="menu">
+	<img src="https://i.pinimg.com/originals/77/74/64/777464cca9d5a63b510016f3b533a71c.jpg" alt="menu">
 	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium exercitationem natus explicabo saepe minus debitis similique modi esse perspiciatis accusantium aspernatur aperiam dolorem placeat, fugiat, quibusdam repellat quia eaque vel.</p>
 		<!--  LOGIN -->
 	<h5>Para poder Ordnear Resgistrese </h3>
