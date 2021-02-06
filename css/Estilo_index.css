@@ -1,9 +1,20 @@
 
 	body{
-	background-image: url(https://i.ibb.co/4NLdsks/Superfoods.jpg);*/
+		background:;
 	}
 	/*color de header */
-	#id-side-header{
+	.side-header.inicio{
 		font-family: italic;
-		color:red;
+		background-image: url(https://i.pinimg.com/originals/33/3b/94/333b948a447374c5b442633435779532.png);
+		width: 125%;
+		height: 800px;
+		position: relative;
+	}
+	header,h1 {
+		color: white;
+		text-align: center;
+	}
+	/* vamos a agregar el un fondo en el header*/
+	#logo-header{
+	
 	}

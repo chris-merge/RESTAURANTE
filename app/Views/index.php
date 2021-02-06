@@ -15,30 +15,13 @@
 <body>
 	<!--  -->
 	<!-- HEADER DE LA PAGIAN PRINCIPAL  -->
+	
 	<!--ENCABEZADO DE LA PAGINA   -->
-	<header id-side-header>
+	<header class="side-header inicio">
 		
-	<h1> Comida Rapida "EL CHOCOLOCO"</h1>
-	<!-- imagen de fondo -->
-	<img src="https://i.pinimg.com/originals/77/74/64/777464cca9d5a63b510016f3b533a71c.jpg" alt="menu">
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium exercitationem natus explicabo saepe minus debitis similique modi esse perspiciatis accusantium aspernatur aperiam dolorem placeat, fugiat, quibusdam repellat quia eaque vel.</p>
-		<!--  LOGIN -->
-	<h5>Para poder Ordnear Resgistrese </h3>
-	<form>
-    <div class="row">';
-    <div class="input-field ">';
-    <input id="name" type="text" class="validate" name="nombre">
-    <label class="active" for="name">Usuario</label>
-    </div>
-    <div class="input-field ">
-    <input name="pass" id="pass" type="password" class="validate">
-    <label class="active" for="pass">Contraceña</label>
-    </div>
-    <button  class='btn waves-effect waves-light' type='submit'>Ingresar</button>
-    <a href='#' class='waves-effect waves-light btn'>Registar</a>
-    </div>
-    </form>
+	<h1> !COMIDA RAPIDA!</h1>		
     </header>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium exercitationem natus explicabo saepe minus debitis similique modi esse perspiciatis accusantium aspernatur aperiam dolorem placeat, fugiat, quibusdam repellat quia eaque vel.</p>
     <!-- FIN DE HEADER DE LA PAGIAN PRINCIPAL  -->
     <!-- FIN DE  FORMULARIO -->
     <!-- SECCION DE MISION VISSION nosotros  -->
