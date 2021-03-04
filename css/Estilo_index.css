@@ -1,9 +1,100 @@
 
+<<<<<<< HEAD
 	body{
 	/*background-image: url(https://i.ibb.co/4NLdsks/Superfoods.jpg);*/
 	}
 	/*color de header */
 	#id-side-header{
+=======
+body{
+	font-family: 'Noto Sans JP', sans-serif;
+	background-color: rgb(235, 230, 229,30);
+}
+/** GLOBARES**/
+
+/** GLOBARES**/
+	
+	/*color de header , posicionamieto de las imagen y congfiguracion de adaptacion  */
+	.side-header.inicio{
+		
+>>>>>>> css
 		font-family: italic;
-		color:red;
+		background-image: url(https://i.pinimg.com/originals/17/1f/a0/171fa0c79d7dfbb5ed4167fc8675de56.png);
+		width: 97%;
+		height:100vh;
+		min-height: 700px;
+		transform: translate(2%,-4%);
 	}
+	header,h1 {
+		color: white;
+		text-align: center;
+		font-size: 40px;
+	}
+/* aqui se va usar el flexbox con la mision y la mision*/
+.barra{
+display: flex;
+justify-content: flex-end;
+justify-content: space-between;
+
+}
+/* codigo para poner en el centro el h1 de la mision y vision1*/
+#Mision{
+
+	display: flex;
+	justify-content: center;
+}
+#Vision{
+	display: flex;
+	justify-content: center;
+}
+/**	codigo para dar esspacio en el nav con icons**/
+#navegacion{
+	margin-right: 30px;
+}
+#navegacion li: last-of-type{
+margin: 0;
+}
+#navegacion a:hover{
+color:#2C3E50;
+}
+/* codigo para dar estilo a footer*/
+#footer{
+margin-right: 70px;
+}
+/*utilidades*/
+/*diseño de contenedor*/
+.contenedor{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	display: flex;
+	justify-content:center; 
+}
+.contenedor h3{
+	display: flex;
+	justify-content: center;
+}
+#article{
+	width: 100vh;
+	height: auto;
+	justify-content: center;
+}
+/* centrar el mypime s.a de cb*/
+#inf{
+	width: auto;
+	height: 100%;
+	
+}
+#sociedad{
+	display: flex;
+	justify-content: center;
+}
+/*dar fondo al modal del formlulario*/
+#title_forms{
+	color: black;
+	display: flex;
+	justify-content: center;
+}
+#btn{
+	display: flex;
+	justify-content: center;
+}
