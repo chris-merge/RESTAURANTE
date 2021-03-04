@@ -1,6 +1,7 @@
 
 body{
 	font-family: 'Noto Sans JP', sans-serif;
+	background-color: rgb(235, 230, 229,30);
 }
 /** GLOBARES**/
 
@@ -52,8 +53,40 @@ color:#2C3E50;
 #footer{
 margin-right: 70px;
 }
-#title{
+/*utilidades*/
+/*diseño de contenedor*/
+.contenedor{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
+	justify-content:center; 
+}
+.contenedor h3{
+	display: flex;
+	justify-content: center;
+}
+#article{
+	width: 100vh;
+	height: auto;
+	justify-content: center;
+}
+/* centrar el mypime s.a de cb*/
+#inf{
+	width: auto;
+	height: 100%;
+	
+}
+#sociedad{
+	display: flex;
+	justify-content: center;
+}
+/*dar fondo al modal del formlulario*/
+#title_forms{
+	color: black;
+	display: flex;
+	justify-content: center;
+}
+#btn{
+	display: flex;
+	justify-content: center;
 }

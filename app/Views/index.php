@@ -14,6 +14,17 @@
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
      <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+<!-- FUNCION DE JS PARA MODAL-->
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+  });
+
+ $(document).ready(function(){
+    $('.modal').modal();
+  });
+</script>
 </head>
 
 <body>
@@ -27,7 +38,36 @@
       	</li>
       	<!-- LINK PARA REGRESAR EL INICIO -->
       <li>
-      	<a href="#">Login</a>
+      	<a href="#modal" class="modal-trigger">Login</a>
+    <!-- Modal Trigger -->
+   <!-- Modal Structure -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <!--  LOGIN -->
+	<h5 id="title_forms">Para poder Ordnear Resgistrese </h5>
+	<form>
+    <div class="row">
+    <div class="input-field ">
+    <input id="name" type="text" class="validate" name="nombre">
+    <label class="active" for="name">Usuario</label>
+    </div>
+    <div class="input-field ">
+    <input name="pass" id="pass" type="password" class="validate">
+    <label class="active" for="pass">Contraceña</label>
+    </div>
+    <div id="btn">
+    <button  class='btn waves-effect waves-light' type='submit'>Ingresar</button>
+    <a href='#' class='waves-effect waves-light btn'>Registar</a>
+    </div>
+    </div>
+    </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+    </div>
+     <!--  LOGIN -->
+  </div>
+  	<!-- Modal Trigger -->
       </li>
       <!--ICONS DE NOSOTROS  -->
       <li>
@@ -63,12 +103,11 @@
 	<!--ENCABEZADO DE LA PAGINA   -->
 	<header class="side-header inicio">
 		<!-- el side bar-->
-		<h1 id="h1"> !COMIDA RAPIDA!</h1>	
+		<h1 > !COMIDA RAPIDA!</h1>	
 		<div id="id_logo">
 			
 		</div>
     </header>
-    
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium exercitationem natus explicabo saepe minus debitis similique modi esse perspiciatis accusantium aspernatur aperiam dolorem placeat, fugiat, quibusdam repellat quia eaque vel.</p>
     <!-- FIN DE HEADER DE LA PAGIAN PRINCIPAL  -->
     <!-- FIN DE  FORMULARIO -->
@@ -87,20 +126,24 @@
     </div>
     </div>
 	<!-- DETALLE DE QUE SE VENTE  -->
-	<section>
-		
+
+	<section class="contenedor section">
 		<!--ARTICULO DE LA PAGINA  -->
+		<div id="article">
 		<article>
 	<h3>La Mejor Comida</h3>
 	<p>Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Aperiam, repudiandae tempore aspernatur repellat totam obcaecati magni accusantium exercitationem consequatur voluptatibus illum quae ipsa praesentium debitis quam est! Corrupti perferendis, cupiditate!</p>
 	</article>
+	</div>
 	</section>
 	<!-- DETALLE DE QUE SE VENTE  -->
-	<section>
+	<section class="informacion">
+		<div id="inf">
 	<blockquote>
 		EL personal administrativo se compromete a ofrecer la mejor comida, con las medidas de proteccíon para garantizar la calidad de nuestros productos
 	</blockquote>
-	<P>-" MYPIME S.A De C.V"-</P>
+	</div>
+	<p id="sociedad">-" MYPIME S.A De C.V"-</p>
 	</section>
 </body>
 
@@ -108,6 +151,9 @@
 	<footer>
 	<nav id="footer">
 		<ul>
+		<li>
+		<i class="material-icons">code</i>		
+		</li>
 		<li>
 		<a href="#">Desarrolladores</a>
 		</li>
