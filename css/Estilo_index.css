@@ -90,3 +90,28 @@ margin-right: 70px;
 	display: flex;
 	justify-content: center;
 }
+/*aqui se le va a dar stilo al carrucel*/
+#Container{
+	height: auto;
+	width: auto;
+	margin-top: 10px;
+	border-radius: 50px;
+}
+/* estilo de los link de los tabs*/
+#LINK{
+	color: black;
+}
+/*card de el menu*/
+.card-content{
+	width: auto;
+	height: auto;
+	border: 5px solid red;
+}
+.card-content p{
+	display: flex;
+	justify-content: center;
+}
+.card-action a{
+	display: flex;
+	justify-content: center;
+}
