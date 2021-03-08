@@ -24,22 +24,14 @@
       	</li>
       	<!-- LINK PARA REGRESAR EL INICIO -->
       <li>
-      	<a href="#">Incio</a>
+      	<a href="<?php echo base_url('/Home/Menu') ?>">Incio</a>
   	<!-- Modal Trigger -->
       </li>
-      <!--ICONS DE NOSOTROS  -->
-      <li>
-      	<i class="material-icons">location_on</i>
-      </li>
-      <li>
-      	<a href="#">Ubicacion</a>
-      </li>
-      <!-- ICONS DE BLOG -->
       <li>
       	<i class="material-icons">assignment</i>
       </li>
       <li>
-      	<a href="#">Reserva</a>
+      	<a href="<?php echo base_url('/Home/reservaciones') ?>">Reserva</a>
       </li>
       <!-- ICOS DE CONTACTO -->
       <li>
@@ -92,7 +84,7 @@
    				<p> MENUS DEL DIA Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Aperiam doloribus quas, vel repudiandae provident, laboriosam placeat quasi est quos harum explicabo, iusto eos officia debitis, magni accusamus possimus voluptatem expedita!</p>
    			</div>
    			<div class="card-action">
-   				<a id="link" href="#"><i class="material-icons">add</i>Reservar</a>
+   				<a id="link" href="<?php echo base_url('Home/reservaciones'); ?>"><i class="material-icons">add</i>Reservar</a>
    			</div>
    		</div>
    	</div>
@@ -119,7 +111,7 @@
    				<p> BEBIDAS Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Aperiam doloribus quas, vel repudiandae provident, laboriosam placeat quasi est quos harum explicabo, iusto eos officia debitis, magni accusamus possimus voluptatem expedita!</p>
    			</div>
    			<div class="card-action">
-   				<a id="link" href="#"><i class="material-icons">add</i>Reservar</a>
+   				<a id="link" href="<?php echo base_url('Home/reservaciones'); ?>"><i class="material-icons">add</i>Reservar</a>
    			</div>
    		</div>
    	</div>

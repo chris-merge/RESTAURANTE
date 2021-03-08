@@ -8,11 +8,16 @@ class Home extends BaseController
 	{
 		return view('index');
 	}
+	/*vista de menu*/
 	public function Menu()
 	{
 		echo view('menu');
 	}
-
+	/*vista de reservaciones*/
+	public function reservaciones()
+	{
+		echo view('reservaciones');
+	}
 	//--------------------------------------------------------------------
 
 }
