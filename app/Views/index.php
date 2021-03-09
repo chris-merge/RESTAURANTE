@@ -57,7 +57,7 @@
     </div>
     <div id="btn">
     <button  class='btn waves-effect waves-light' type='submit'>Ingresar</button>
-    <a href='#' class='waves-effect waves-light btn'>Registar</a>
+    <a class="waves-effect waves-light btn" href="<?php echo base_url('/Home/Menu') ?>">Registar</a>
     </div>
     </div>
     </form>
