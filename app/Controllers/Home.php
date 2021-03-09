@@ -18,6 +18,8 @@ class Home extends BaseController
 	{
 		echo view('reservaciones');
 	}
+	
+
 	//--------------------------------------------------------------------
 
 }
