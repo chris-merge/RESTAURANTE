@@ -45,15 +45,15 @@
     <div class="modal-content">
       <!--  LOGIN -->
 	<h5 id="title_forms">Para poder Ordnear Resgistrese </h5>
-	<form>
+	<form action="<?php echo base_url('/Home/Validadcion') ?>" method="POST" >
     <div class="row">
     <div class="input-field ">
-    <input id="name" type="text" class="validate" name="nombre">
-    <label class="active" for="name">Usuario</label>
+    <input id="NAME" type="text" class="validate" name="NAME">
+    <label class="active" for="NAME">Usuario</label>
     </div>
     <div class="input-field ">
-    <input name="pass" id="pass" type="password" class="validate">
-    <label class="active" for="pass">Contraceña</label>
+    <input name="PASS" id="PASS" type="password" class="validate">
+    <label class="active" for="PASS">Contraceña</label>
     </div>
     <div id="btn">
     <button  class='btn waves-effect waves-light' type='submit'>Ingresar</button>
