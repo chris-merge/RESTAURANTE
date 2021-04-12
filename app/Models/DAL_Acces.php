@@ -40,8 +40,9 @@ aqui vamos a hacer la lista de la tabla bebidas
 
 public function Lista_Bebida(){
     $DB= \Config\Database::connect();
-    $sql=$DB->query('SELECT * FROM `menu`');
+    $sql=$DB->query('SELECT * FROM `bebida`');
     $results=$sql->getResult();
+    
     return $results;
 }
 }

@@ -66,7 +66,7 @@
    	<div class="col s12">
    		<ul class="tabs">
    			<li class="tab col s3"><a id="LINK" class="waves-effect  btn" href="#MENU">MENU DEL DIA</a></li>
-   			<li class="tab col s3"><a id="LINK" class="waves-effect  btn" href="#BEBIDA">BEBIDAS</a></li>
+   			<li class="tab col s3"><a onclick="Lista_Bebida();" id="LINK" class="waves-effect  btn" href="#BEBIDA">BEBIDAS</a></li>
    			<li class="tab col s3"><a id="LINK" class="waves-effect  btn" href="#PROMOCIONES">PROMOCIONES</a></li>
    			<li class="tab col s3"><a id="LINK"class="waves-effect waves-light btn" href="#GPS">UBICACION</a>
         </li>
@@ -75,8 +75,8 @@
    </div>
    <!-- aqui se va diseñar los div para los taps -->
     <div id="MENU">
-   <?php 
-  $x=1;
+   <?php
+    $x=1;
    while ( $x<=count($menu)) {
      # code...
 //   	<!-- aqui se va diseñar  el card para el menu del dia-->
@@ -88,6 +88,7 @@
    			echo '</div>';
    			echo '<div class="card-content" id="card-content">';
         //aqui se ocupa el arrar de todo
+
           foreach ($menu as $Menu) {
             # code...
             if ($Menu->id_menu==$x) {
@@ -124,9 +125,8 @@
    <div id="BEBIDA">
    	   	<!-- aqui se va diseñar  el card para el BEBIDAS-->
         <?php
-
-        
-           # code...
+       foreach ($bebida as $Bebida) {
+         # code...
     echo '<div class="row">';
     echo '<div class="col s12 m7">';
       echo '<div class="card">';
@@ -134,15 +134,22 @@
           echo '<img src="#" alt="foto">';
         echo '</div>';
         echo '<div class="card-content" id="card-content">';
-        
+        //contenedor 
+        echo '<img src="https://i.pinimg.com/564x/4e/1f/4e/4e1f4e507d49eee89142f399a4b8f806.jpg" alt="foto"';
+          echo "<p>";
+           echo $Bebida->nombre;
+            echo "</p>";
+            echo "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure magnam dicta eius commodi facere suscipit eos fugit optio debitis impedit. Dolores odio sit sint, sed ipsum non facere totam quasi.</p>";
        
         echo '</div>';
+        //contenedor 
         echo '<div class="card-action">';
           echo '<a id="link" href="<?php echo base_url("Home/reservaciones"); ?>"><i class="material-icons">add</i>Reservar</a>';
         echo '</div>';
       echo '</div>';
     echo '</div>';
-  
+      
+         }
     ?>
    </div>
    	<!-- aqui se va diseñar  el card para el BEBIDAS-->

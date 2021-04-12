@@ -2,7 +2,8 @@
  namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\BL_menu;
-
+use App\Models\BL_User;
+use App\Models\BL_Bebida;
 class Home extends Controller
 {
 	
@@ -23,11 +24,17 @@ class Home extends Controller
 		$name_user=$_POST['NAME'];
 		$pass=$_POST['PASS'];
 		$Bl_menu = new Bl_menu();
-		if($Bl_menu->Logins($name_user,$pass)>0)
+		$BL_User= new BL_User();
+		$BL_Bebida=  new BL_Bebida();
+		
+		if($BL_User->Logins($name_user,$pass)>0)
 		{
 			# code...
 		$menu['menu']=$Bl_menu->Lista_menu();
-		return  view('menu',$menu);
+		$menu['bebida']=$BL_Bebida->Lis_Bebida();
+
+
+		return  view('menu', $menu);
 		}
 		else
 		{
@@ -37,5 +44,10 @@ class Home extends Controller
 		}
 	}
 	//metodo listado del menu
+	 function list_menus(){
+		$BL_Bebida=  new BL_Bebida();
+		$bebida['bebida']=$BL_Bebida->Lis_Bebida();
+		return $bebida;
 
+	}
 }

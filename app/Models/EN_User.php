@@ -5,27 +5,26 @@ use CodeIgniter\Model;
 
 class EN_User extends Model
 {
-	public  $id_user= int;
-	public  $firt_name=string;
-	public  $last_name=string;
-	public  $name_user=string;
-	public  $pass=string;
-	/**
+	private   $id_user;
+	private  $firt_name;
+	private  $last_name;
+	private  $name_user;
+	private  $pass;
+	/**private
 	 contructor vacio
 	 */
-	public EN_User(){
+	public function  EN_User(){
 
 	}
-	//constructor con porametro para extraer datos espesificos
-	public EN_User(int $pId, string $pNname_user, string $pPass){
-		$id_user= $pId;
+	//constructor con porametro para extraer datos espesificos//
+	public function _construct1(string $pName_user, string $pPass){
 		$name_user=$pNname_user;
 		$pass=$pPass;
 	}
 	/**
 	 contructor con todo el arreglo 
 	 */
-	 public EN_User(int $pId, string $pNname_user, string $pPass, string $pFirst_name, string $pLast_name){
+	 public function _construct2(int $pId, string $pNname_user, string $pPass, string $pFirst_name, string $pLast_name){
 	 	$id_user=$pId;
 	 	$name_user=$pNname_user;
 	 	$pass=$pPass;
