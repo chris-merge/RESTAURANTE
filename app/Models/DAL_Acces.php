@@ -42,9 +42,26 @@ public function Lista_Bebida(){
     $DB= \Config\Database::connect();
     $sql=$DB->query('SELECT * FROM `bebida`');
     $results=$sql->getResult();
-    
     return $results;
 }
-}
+//lista de promociones
+public function Lista_Promociones (){
 
+    $DB= \Config\Database::connect();
+    $sql=$DB->query('SELECT * FROM `promociones`');
+    $results=$sql->getResult();
+   // json_encode($results);
+    return $results;
+}
+//lista por id de promociones
+public function List_id($id)
+{
+    $DB= \Config\Database::connect();
+    $sql= $DB->query('SELECT * FROM `promociones` WHERE `Id_promociones`=`$id` ');
+    $results=$sql->getResult();
+    json_encode($results);
+    return $results;
+}
+//lista por id de promociones
+}
 ?>

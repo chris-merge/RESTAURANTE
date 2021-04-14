@@ -4,6 +4,7 @@ use CodeIgniter\Controller;
 use App\Models\BL_menu;
 use App\Models\BL_User;
 use App\Models\BL_Bebida;
+use App\Models\Bl_Promociones;
 class Home extends Controller
 {
 	
@@ -26,15 +27,17 @@ class Home extends Controller
 		$Bl_menu = new Bl_menu();
 		$BL_User= new BL_User();
 		$BL_Bebida=  new BL_Bebida();
-		
+		$BL_Promo= new BL_Promociones();
 		if($BL_User->Logins($name_user,$pass)>0)
 		{
 			# code...
-		$menu['menu']=$Bl_menu->Lista_menu();
-		$menu['bebida']=$BL_Bebida->Lis_Bebida();
+		$DATA['menu']=$Bl_menu->Lista_menu();
+		$DATA['bebida']=$BL_Bebida->Lis_Bebida();
+		$DATA['promociones']=$BL_Promo->List_Promocion();
+	
 
 
-		return  view('menu', $menu);
+		return  view('menu', $DATA);
 		}
 		else
 		{

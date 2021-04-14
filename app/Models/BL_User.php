@@ -8,7 +8,8 @@ class BL_User extends Model
 public function Logins($NAME,$PASS)
 {
 	 $DAL= new DAL_Acces();
-	return $DAL->Login($NAME,$PASS);
+	 $CRUD=$DAL->Login($NAME,$PASS);
+	return $CRUD;
 }
 
 }

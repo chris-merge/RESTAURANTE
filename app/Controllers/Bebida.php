@@ -12,7 +12,8 @@ class MENU_CONTROLLER extends Controller
 		
 		$BL_Bebida=  new BL_Bebida();
 		$bebida['bebida']=$BL_Bebida->Lis_Bebida();
-		return view($bebida);
+		json_encode(bebida);
+		return $bebida;
 		
 	
 	

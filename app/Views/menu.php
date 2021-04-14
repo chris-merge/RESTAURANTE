@@ -66,8 +66,8 @@
    	<div class="col s12">
    		<ul class="tabs">
    			<li class="tab col s3"><a id="LINK" class="waves-effect  btn" href="#MENU">MENU DEL DIA</a></li>
-   			<li class="tab col s3"><a onclick="Lista_Bebida();" id="LINK" class="waves-effect  btn" href="#BEBIDA">BEBIDAS</a></li>
-   			<li class="tab col s3"><a id="LINK" class="waves-effect  btn" href="#PROMOCIONES">PROMOCIONES</a></li>
+   			<li class="tab col s3"><a  id="LINK" class="waves-effect  btn" href="#BEBIDA">BEBIDAS</a></li>
+   			<li class="tab col s3"><a id="LINK" class="waves-effect  btn" href="#PROMOCION">PROMOCIONES</a></li>
    			<li class="tab col s3"><a id="LINK"class="waves-effect waves-light btn" href="#GPS">UBICACION</a>
         </li>
    		</ul>
@@ -125,49 +125,80 @@
    <div id="BEBIDA">
    	   	<!-- aqui se va diseñar  el card para el BEBIDAS-->
         <?php
-       foreach ($bebida as $Bebida) {
+        $x=1;
+       while ($x <= count($bebida)) {
+         # code...
+       
          # code...
     echo '<div class="row">';
     echo '<div class="col s12 m7">';
       echo '<div class="card">';
         echo '<div class="card-image">';
-          echo '<img src="#" alt="foto">';
+        echo '<img src="https://i.pinimg.com/564x/4e/1f/4e/4e1f4e507d49eee89142f399a4b8f806.jpg" alt="foto"';
         echo '</div>';
         echo '<div class="card-content" id="card-content">';
-        //contenedor 
-        echo '<img src="https://i.pinimg.com/564x/4e/1f/4e/4e1f4e507d49eee89142f399a4b8f806.jpg" alt="foto"';
-          echo "<p>";
-           echo $Bebida->nombre;
+        //aqui se ocupa el arrar de todo
+          foreach ($bebida as $Bebida) {        
+              # code...
+            if ($Bebida->Id_bebida==$x) {
+              # code...
+            echo "<p>";
+            echo $Bebida->nombre;
             echo "</p>";
             echo "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure magnam dicta eius commodi facere suscipit eos fugit optio debitis impedit. Dolores odio sit sint, sed ipsum non facere totam quasi.</p>";
-       
-        echo '</div>';
-        //contenedor 
+            }
+            //fin del if
+            }
+          
+        echo"</div>";
         echo '<div class="card-action">';
-          echo '<a id="link" href="<?php echo base_url("Home/reservaciones"); ?>"><i class="material-icons">add</i>Reservar</a>';
-        echo '</div>';
-      echo '</div>';
-    echo '</div>';
+   echo'<a id="link" href="<?php echo base_url("Home/reservaciones"); ?>"><i class="material-icons">add</i>Reservar</a>';
+        echo "</div>";
+      echo "</div>";
+    echo "</div>";
+   echo "</div>";
+    //<!-- aqui se va diseñar  el card para el menu del dia-->
+   echo "</div>";
       
-         }
+      $x++;
+      }
     ?>
    </div>
    	<!-- aqui se va diseñar  el card para el BEBIDAS-->
    </div>
-   <div id="PROMOCIONES">
+   <div id="PROMOCION">
    	   	<!-- aqui se va diseñar  el card para el PROMOCIONES-->
-   <div class="row">
-   	<div class="col s12 m7">
-   		<div class="card">
-   			<div class="card-image">
-   				<img src="#" alt="foto">
-   			</div>
-   			<div class="card-content" id="card-content">
-   				<p> PROMOCIONES Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Aperiam doloribus quas, vel repudiandae provident, laboriosam placeat quasi est quos harum explicabo, iusto eos officia debitis, magni accusamus possimus voluptatem expedita!</p>
-   			</div>
-   		</div>
-   	</div>
-   </div>
+        <?php 
+        $x=1;
+   # code...
+ while ($x <= count($promociones)) {
+   # code...
+ 
+   echo '<div class="row">';
+   	echo '<div class="col s12 m7">';
+   		echo '<div class="card">';
+   			echo '<div class="card-image">';
+   				echo '<img src="#" alt="foto">';
+   			echo '</div>';
+   			echo '<div class="card-content" id="card-content">';
+        foreach ($promociones as $Promo) {
+          # code...
+          echo "<p>";
+         echo $Promo->Id_Promociones;
+          echo $Promo->Id_Menu;
+          echo $Promo->Id_Bebida;
+          echo "</p>";
+          echo "<br>";
+   				echo '<p> PROMOCIONES Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Aperiam doloribus quas, vel repudiandae provident, laboriosam placeat quasi est quos harum explicabo, iusto eos officia debitis, magni accusamus possimus voluptatem expedita!</p>';
+          }
+   			echo '</div>';
+   		echo '</div>';
+   	echo '</div>';
+   echo '</div>';
+
+$x++;
+   }
+    ?>
    	<!-- aqui se va diseñar  el card para el PROMOCIONES-->
    </div>
 </body>
