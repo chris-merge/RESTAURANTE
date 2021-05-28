@@ -34,9 +34,6 @@ class Home extends Controller
 		$DATA['menu']=$Bl_menu->Lista_menu();
 		$DATA['bebida']=$BL_Bebida->Lis_Bebida();
 		$DATA['promociones']=$BL_Promo->List_Promocion();
-	
-
-
 		return  view('menu', $DATA);
 		}
 		else
@@ -45,12 +42,5 @@ class Home extends Controller
 			echo view('index');
 			echo "<script>alert('SUS DATOS NO SON VALIDOS ')</script>";
 		}
-	}
-	//metodo listado del menu
-	 function list_menus(){
-		$BL_Bebida=  new BL_Bebida();
-		$bebida['bebida']=$BL_Bebida->Lis_Bebida();
-		return $bebida;
-
 	}
 }

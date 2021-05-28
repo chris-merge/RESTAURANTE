@@ -168,7 +168,7 @@
    </div>
    <div id="PROMOCION">
    	   	<!-- aqui se va diseñar  el card para el PROMOCIONES-->
-        <?php 
+        <?php
         $x=1;
    # code...
  while ($x <= count($promociones)) {
@@ -184,9 +184,13 @@
         foreach ($promociones as $Promo) {
           # code...
           echo "<p>";
-         echo $Promo->Id_Promociones;
-          echo $Promo->Id_Menu;
-          echo $Promo->Id_Bebida;
+        echo $Promo->Platillo;
+        echo "<br>";
+        echo $Promo->Bebida;
+        echo "<br>";
+        echo $Promo->Descripcion;
+        echo "<br>";
+        echo "$".$Promo->Precio; 
           echo "</p>";
           echo "<br>";
    				echo '<p> PROMOCIONES Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Aperiam doloribus quas, vel repudiandae provident, laboriosam placeat quasi est quos harum explicabo, iusto eos officia debitis, magni accusamus possimus voluptatem expedita!</p>';

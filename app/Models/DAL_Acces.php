@@ -54,12 +54,11 @@ public function Lista_Promociones (){
     return $results;
 }
 //lista por id de promociones
-public function List_id($id)
+public function List_id_Menu($id)
 {
     $DB= \Config\Database::connect();
-    $sql= $DB->query('SELECT * FROM `promociones` WHERE `Id_promociones`=`$id` ');
+    $sql= $DB->query('SELECT * FROM `menu` WHERE `id_menu`=`$id`');
     $results=$sql->getResult();
-    json_encode($results);
     return $results;
 }
 //lista por id de promociones

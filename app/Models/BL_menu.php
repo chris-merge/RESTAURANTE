@@ -11,6 +11,11 @@ public function Lista_menu()
 	return $DAL->Lista_Menu();
 }
 
+public function Lista_Menu_Id($id)
+{
+	$DAL= NEW DAL_Acces();
+	return $DAL->List_id_Menu($id);
+}
 }
 
  ?>
