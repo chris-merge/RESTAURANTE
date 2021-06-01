@@ -95,10 +95,11 @@ margin-right: 70px;
 	width: auto;
 	margin-top: 10px;
 	border-radius: 50px;
+	border: 20px solid blue;
 }
 .card-image img{
 	width: 150px;
-	height: 400px;
+	height: 210px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-right: 10px;
@@ -107,11 +108,22 @@ margin-right: 70px;
 /* estilo de los link de los tabs*/
 #LINK{
 	color: black;
+	width: 280px;
+	height: auto;
+	margin-top: 5px;
+}
+/* tabs contenedor */
+li{
+	background: grey;
+	height: 50px;
 }
 /*card de el menu, bebidas, promociones, ubicacion*/
+/* este contiene la descripcion de las bebidas */
 .card-content{
 	width: auto;
 	height: auto;
+	text-align: justify;
+ border: 20px solid yellow;
 }
 .card-content p{
 	display: flex;
@@ -126,4 +138,41 @@ margin-right: 70px;
 	width:100%;
 	height:700px;
 	border:10px;
+}
+/*Contedor de las tarjetas para alinearnas en lista de 3 columnas	*/
+#MENU{
+	padding-top: 20px;
+	width: 100%;
+	height: 100%;
+	border: 20px solid red;
+	display: grid;
+	grid-template-columns:repeat(3, 1fr);
+}
+/* configuracion de la tarjeta  */
+#card_contenedor{
+	border: 5px solid pink;
+	height: auto;
+	width: 360px;
+	display: flex;
+	justify-content: space-between;
+}
+#BEBIDA{
+	padding-top: 20px;
+	width: 100%;
+	height: 100%;
+	border: 20px solid pink;
+	display: grid;
+	grid-template-columns:repeat(3, 1fr);
+}
+#PROMOCION{
+	padding-top: 20px;
+	width: 100%;
+	height: 100%;
+	border: 20px solid black;
+	display: grid;
+	grid-template-columns:repeat(3, 1fr);
+}
+#btn_tabls{
+	width: 450px;
+	height: 25px;
 }

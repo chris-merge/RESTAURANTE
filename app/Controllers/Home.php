@@ -26,14 +26,10 @@ class Home extends Controller
 		$pass=$_POST['PASS'];
 		$Bl_menu = new Bl_menu();
 		$BL_User= new BL_User();
-		$BL_Bebida=  new BL_Bebida();
-		$BL_Promo= new BL_Promociones();
 		if($BL_User->Logins($name_user,$pass)>0)
 		{
 			# code...
 		$DATA['menu']=$Bl_menu->Lista_menu();
-		$DATA['bebida']=$BL_Bebida->Lis_Bebida();
-		$DATA['promociones']=$BL_Promo->List_Promocion();
 		return  view('menu', $DATA);
 		}
 		else
@@ -42,5 +38,31 @@ class Home extends Controller
 			echo view('index');
 			echo "<script>alert('SUS DATOS NO SON VALIDOS ')</script>";
 		}
+	}
+	//vista de bebidas
+	public function Bebidas_listas()
+	{
+		$BL_Bebida=  new BL_Bebida();
+		$DATA['bebida']=$BL_Bebida->Lis_Bebida();
+		echo View('Bebida',$DATA);
+
+	}
+	//vista de menu
+		public function Menus()
+	{
+		$Bl_menu = new Bl_menu();
+        $DATA['menu']=$Bl_menu->Lista_menu();
+		return view('menu',$DATA);
+	}
+	//vista de promociones
+	public function Promociones_Vista()
+	{
+		$BL_Promo= new BL_Promociones();
+        $DATA['promociones']=$BL_Promo->List_Promocion();
+        return view('Promociones',$DATA);
+	}
+	public function Ubicacion_GPS()
+	{
+		return view('Ubicacion');
 	}
 }
