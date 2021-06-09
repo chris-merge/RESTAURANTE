@@ -69,60 +69,67 @@
    <div class="row">
    	<div class="col s12">
    		<ul class="tabs">
-   			<li class=" col s3"><a id="LINK" class="waves-effect  btn" href="<?php echo base_url('/Home/Menus')?>">MENU DEL DIA</a></li>
-   			<li class=" col s3"><a  id="LINK" class="waves-effect  btn" href="<?php echo base_url('/Home/Bebidas_listas')?>">BEBIDAS</a></li>
+   			<li id="LI" class=" col s3"><a id="LINK" class="waves-effect  btn" href="<?php echo base_url('/Home/Menus')?>">MENU DEL DIA</a></li>
+   			<li id="LI" class=" col s3"><a  id="LINK" class="waves-effect  btn" href="<?php echo base_url('/Home/Bebidas_listas')?>">BEBIDAS</a></li>
         
-   			<li class=" col s3"><a id="LINK" class="waves-effect  btn" href="<?php echo base_url('/Home/Promociones_Vista')?>">PROMOCIONES</a></li>
-   			<li class=" col s3"><a id="LINK"class="waves-effect waves-light btn" href="<?php echo base_url('/Home/Ubicacion_GPS')?>">UBICACION</a>
+   			<li id="LI" class=" col s3"><a id="LINK" class="waves-effect  btn" href="<?php echo base_url('/Home/Promociones_Vista')?>">PROMOCIONES</a></li>
+   			<li id="LI" class=" col s3"><a id="LINK"class="waves-effect waves-light btn" href="<?php echo base_url('/Home/Ubicacion_GPS')?>">UBICACION</a>
         </li>
    		</ul>
    	</div>
    </div>
-   <!-- aqui se va diseñar los div para los taps -->
-    <div id="MENU">
-
-   <?php
-    $x=1;
-   while ( $x<=count($menu)) {
-     # code...
-//   	<!-- aqui se va diseñar  el card para el menu del dia-->
-   echo '<div id="Card_UI" class="row">';
-   	echo '<div class="col s12 m7">';
-   		echo '<div id="card_contenedor" class="card">';
-   			echo '<div class="card-image">';
-   			echo '<img src="https://i.pinimg.com/564x/4e/1f/4e/4e1f4e507d49eee89142f399a4b8f806.jpg" alt="foto"';
-   			echo '</div>';
-   			echo '<div class="card-content" id="card-content">';
-        //aqui se ocupa el arrar de todo
-
-          foreach ($menu as $Menu) {
-            # code...
-            if ($Menu->id_menu==$x) {
-              # code...
-               echo "<p>";
-            echo $Menu->nombre;
-            echo "</p>";
-            echo "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure magnam dicta eius commodi facere suscipit eos fugit optio debitis impedit. Dolores odio sit sint, sed ipsum non facere totam quasi.</p>";
-            }
-
-          }
-          
-   			echo"</div>";
-   			echo '<div class="card-action">';
-   echo'<a id="link" href="<?php echo base_url("Home/reservaciones"); ?>"><i class="material-icons">add</i>Reservar</a>';
-   			echo "</div>";
-   		echo "</div>";
-   	echo "</div>";
-   echo "</div>";
-   	//<!-- aqui se va diseñar  el card para el menu del dia-->
-   echo "</div>";
-   $x++;
-   }
-   ?>
-   
-   </div>
-
+    <!-- tabs para navegar entre las bebidas, promociones, menu del dia --> 
+  <div id="MENU">
   
+ <!--TARJETA PARA MOSTRAR EL MENU -->
+ <?php 
+ //inicio del while
+ $dia=date('D');
+ $x=1;
+ while ($x<=count($menu)) {
+   // code...
+  //primer div//
+ echo ' <div class="row">';
+ //segundo div//
+ echo ' <div id="card_contenedor" class="col s12 m7">';
+ //tercer div//
+ echo ' <div class="card">';
+ //cuarto div//
+ echo ' <div class="card-image">';
+ //imagen//
+ echo ' <img id="imag_card" src="https://i.pinimg.com/564x/de/d7/1a/ded71a7ef28c69ad5cfcd8c69c562031.jpg">';
+ echo ' <span class="card-title">MENU DEL DIA '.$dia.'</span>';
+ //cierre del div de imagen (div 4)//
+ echo ' </div>';
+  //contenedor de la tarjeta //
+ echo ' <div id="card-content" class="card-content">';
+ //recorrer la lista de la base de datos
+ foreach ($menu as $Menu) {
+   // code...
+  //if para ver el id existe
+  if ($Menu->id_menu==$x) {
+    // code...
+ echo "<p>";
+ echo $Menu->nombre;
+ echo "</p>";
+ echo ' <p> Detalles I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>';
+}
+//fin del
+}
+ echo ' </div>';
+ echo ' <div class="card-action">';
+ echo '<a href="/reservaciones">This is a link</a>';
+ echo ' </div>';
+ echo ' </div>';
+ echo ' </div>';
+ echo ' </div>';
+$x++;
+ }
+    ?>
+<!--TARJETA PARA MOSTRAR EL MENU -->
+    </div>
+
 </body>
 <script type="text/javascript" src="/tutorial/js/tabs.js">
 	

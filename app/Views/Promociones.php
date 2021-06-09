@@ -28,24 +28,38 @@
    	</div>
    </div>
    <!-- aqui se va diseñar los div para los taps -->
-	<div id="PROMOCION">
-   	   	<!-- aqui se va diseñar  el card para el PROMOCIONES-->
-        <?php
-        $x=1;
-   # code...
- while ($x <= count($promociones)) {
-   # code...
- 
-   echo '<div class="row">';
-   	echo '<div class="col s12 m7">';
-   		echo '<div id="card_contenedor" class="card">';
-   			echo '<div class="card-image">';
-   				echo '<img src="#" alt="foto">';
-   			echo '</div>';
-   			echo '<div class="card-content" id="card-content">';
-        foreach ($promociones as $Promo) {
-          # code...
-          echo "<p>";
+
+   <!--TARJETA PARA MOSTRAR EL MENU -->
+    <div id="PROMOCION">
+      <!--TARJETA PARA MOSTRAR EL MENU -->
+ <?php 
+ //mostrar el dia
+ date_default_timezone_set('UTC');
+ $dia=date("D"); 
+ //inicio del while
+ $x=1;
+
+ while ($x<=count($promociones)) {
+   // code...
+  //primer div//
+ echo ' <div class="row">';
+ //segundo div//
+ echo ' <div id="card_contenedor" class="col s12 m7">';
+ //tercer div//
+ echo ' <div class="card">';
+ //cuarto div//
+ echo ' <div class="card-image">';
+ //imagen//
+ echo ' <img id="imag_card" src="https://i.pinimg.com/564x/de/d7/1a/ded71a7ef28c69ad5cfcd8c69c562031.jpg">';
+ echo ' <span class="card-title">'.$dia.'</span>';
+ //cierre del div de imagen (div 4)//
+ echo ' </div>';
+  //contenedor de la tarjeta //
+ echo ' <div id="card-content" class="card-content">';
+ //recorrer la lista de la base de datos
+ foreach ($promociones as $Promo) {
+   // code..
+    // code...
         echo $Promo->Platillo;
         echo "<br>";
         echo $Promo->Bebida;
@@ -53,20 +67,23 @@
         echo $Promo->Descripcion;
         echo "<br>";
         echo "$".$Promo->Precio; 
-          echo "</p>";
-          echo "<br>";
-   				echo '<p> PROMOCIONES Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Aperiam doloribus quas, vel repudiandae provident, laboriosam placeat quasi est quos harum explicabo, iusto eos officia debitis, magni accusamus possimus voluptatem expedita!</p>';
-          }
-   			echo '</div>';
-   		echo '</div>';
-   	echo '</div>';
-   echo '</div>';
-
+        echo "</p>";
+        echo "<br>";
+ echo ' <p> Detalles I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>';
+}
+ echo ' </div>';
+ echo ' <div class="card-action">';
+ echo ' <a href="#">This is a link</a>';
+ echo ' </div>';
+ echo ' </div>';
+ echo ' </div>';
+ echo ' </div>';
 $x++;
-   }
+ }
     ?>
-   	<!-- aqui se va diseñar  el card para el PROMOCIONES-->
-   </div>
+<!--TARJETA PARA MOSTRAR EL MENU -->
+    </div>
 	
 </body>
 </html>

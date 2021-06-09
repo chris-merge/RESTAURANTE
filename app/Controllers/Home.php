@@ -15,7 +15,7 @@ class Home extends Controller
 	/*vista de reservaciones*/
 	public function reservaciones()
 	{
-		echo view('reservaciones');
+		return view('reservaciones');
 	}
 	/* aqui se va comenzar el backend*/
 	/* validadcion del login */

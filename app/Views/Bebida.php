@@ -28,51 +28,61 @@
    	</div>
    </div>
    <!-- aqui se va diseñar los div para los taps -->
-   
-
-	<div id="BEBIDA">
-   	   	<!-- aqui se va diseñar  el card para el BEBIDAS-->
-        <?php
-        $x=1;
-       while ($x <= count($bebida)) {
-         # code...
-       
-         # code...
-    echo '<div class="row">';
-    echo '<div class="col s12 m7">';
-      echo '<div id="card_contenedor" class="card">';
-        echo '<div class="card-image">';
-        echo '<img src="https://i.pinimg.com/564x/4e/1f/4e/4e1f4e507d49eee89142f399a4b8f806.jpg" alt="foto"/>';
-        echo '</div>';
-        echo '<div class="card-content" id="card-content">';
-        //aqui se ocupa el arrar de todo
-          foreach ($bebida as $Bebida) {        
-              # code...
-            if ($Bebida->Id_bebida==$x) {
-              # code...
-            echo "<p>";
-            echo $Bebida->nombre;
-            echo "</p>";
-            echo "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure magnam dicta eius commodi facere suscipit eos fugit optio debitis impedit. Dolores odio sit sint, sed ipsum non facere totam quasi.</p>";
-            }
-            //fin del if
-            }
-          
-        echo"</div>";
-        echo '<div class="card-action">';
-   echo'<a id="link" href="<?php echo base_url("Home/reservaciones"); ?>"><i class="material-icons">add</i>Reservar</a>';
-        echo "</div>";
-      echo "</div>";
-    echo "</div>";
-   echo "</div>";
-    //<!-- aqui se va diseñar  el card para el menu del dia-->
-      
-      $x++;
-      }
-    ?>
-   </div>
-   	<!-- aqui se va diseñar  el card para el BEBIDAS-->
-  
+ 
 	
+  <!-- aqui se va diseñar  el card para el BEBIDAS-->
+    <div id="BEBIDA">
+      <!--TARJETA PARA MOSTRAR EL BEBIDA -->
+ <?php
+ //OBTENER EL DIA
+ 
+ date_default_timezone_set('UTC');
+ $dia=date("D"); 
+ //inicio del while
+ $x=1;
+ while ($x<=count($bebida)) {
+   // code...
+  //primer div//
+ echo ' <div class="row">';
+ //segundo div//
+ echo ' <div id="card_contenedor" class="col s12 m7">';
+ //tercer div//
+ echo ' <div class="card">';
+ //cuarto div//
+ echo ' <div class="card-image">';
+ //imagen//
+ echo ' <img id="imag_card" src="https://i.pinimg.com/564x/de/d7/1a/ded71a7ef28c69ad5cfcd8c69c562031.jpg">';
+ echo ' <span class="card-title">Bebidas deL Dia '.$dia.'</span>';
+ //cierre del div de imagen (div 4)//
+ echo ' </div>';
+  //contenedor de la tarjeta //
+ echo ' <div id="card-content" class="card-content">';
+ //recorrer la lista de la base de datos
+ foreach ($bebida as $Bebida) {
+   // code...
+  //if para ver el id existe
+  if ($Bebida->Id_bebida==$x) {
+    // code...
+ echo "<p>";
+ echo $Bebida->nombre;
+ echo "</p>";
+ echo ' <p> Detalles I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>';
+}
+//fin del
+}
+ echo ' </div>';
+ echo ' <div class="card-action">';
+ echo ' <a href="#">This is a link</a>';
+ echo ' </div>';
+ echo ' </div>';
+ echo ' </div>';
+ echo ' </div>';
+$x++;
+ }
+    ?>
+<!--TARJETA PARA MOSTRAR EL BEBIDA -->
+    </div>
+    <!-- aqui se va diseñar  el card para el BEBIDAS-->
 </body>
 </html>
