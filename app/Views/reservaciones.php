@@ -7,7 +7,7 @@
 	<!-- Refrencias de libreria  de materialize -->
     <link rel="stylesheet" type="text/css" href="/tutorial/css/materialize.css" media="screen,projection"/>
     <!--  Link de Materialize -->
-       <link rel="stylesheet" type="text/css" href="/tutorial/css/Estilo_index.css" media="screen,projection"/>
+      <link rel="stylesheet" type="text/css" href="/tutorial/css/Reservacion.css" media="screen,projection"/>
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
      <link rel="preconnect" href="https://fonts.gstatic.com">
      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@
       	</li>
       	<!-- LINK PARA REGRESAR EL INICIO -->
       <li>
-      	<a href="<?php echo base_url('/Home/Menu') ?>">Incio</a>
+      	<a href="<?php echo base_url('/Home/Menus') ?>">Incio</a>
   	<!-- Modal Trigger -->
       </li>
       <li>
@@ -37,7 +37,7 @@
   </nav>
 	 <!--formulario para reservar -->
 	<div class="row">
-		<form  action="" class="col s12">
+		<form  method="post" action="<?php echo base_url('Home/Rerservacion') ?>" class="col s12">
 			<div class="row">
 				<div class="input-field col s6">
 					<input type="text" id="nombne">
@@ -52,12 +52,20 @@
 					<label for="Direccion">Direccion</label>
 				</div>
 				  <div class="input-field col s6">
-				   <select>
-                   <option value="" disabled selected>Eliga una opcion</option>
-                   <option value="1">Option 1</option>
-                   <option value="2">Option 2</option>
-                   <option value="3">Option 3</option>
-                   </select>
+				  	 <select>
+				  	 	<option value="" disabled selected>Eliga una opcion</option>
+				  	<?php 
+				  	$X=1;
+				  	while ($X<=count($menu)) {
+				  	foreach ($menu as $Lista_Menu) {
+            echo '<option value="$Lista_Menu->nombre">';
+            echo $Lista_Menu->nombre;
+            echo "</option>";
+				  	}				  	
+             $X++;
+            }
+             ?>
+                     </select>
                </div>
                <div class="input-field col s6">
                	<input type="number" min="1" max="50" id="cantidad">
@@ -68,7 +76,9 @@
 
                </div>
 			</div>
-			 <button>Reservar</button>
+			<div id="Boton_contenedor">
+			 <button id="button" class="btn waves-effect">Reservar</button>
+			 </div>
 		</form>
 	</div>
 </body>

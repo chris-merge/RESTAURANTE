@@ -119,7 +119,7 @@
 }
  echo ' </div>';
  echo ' <div class="card-action">';
- echo '<a href="/reservaciones">This is a link</a>';
+ echo "<a href='/tutorial/public/Home/Lista_Menu_Reservar'>Reservacion</a>";
  echo ' </div>';
  echo ' </div>';
  echo ' </div>';

@@ -73,7 +73,6 @@
 }
  echo ' </div>';
  echo ' <div class="card-action">';
- echo ' <a href="#">This is a link</a>';
  echo ' </div>';
  echo ' </div>';
  echo ' </div>';

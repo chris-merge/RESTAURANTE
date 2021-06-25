@@ -1,0 +1,10 @@
+form{
+	border: 5px solid red;
+	width: 100vh;
+	height: auto;
+}
+#Boton_contenedor{
+	display: flex;
+	justify-content: center;
+	padding-top: 10px;
+}

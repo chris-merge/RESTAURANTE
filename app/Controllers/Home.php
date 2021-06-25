@@ -65,4 +65,11 @@ class Home extends Controller
 	{
 		return view('Ubicacion');
 	}
+	public function Lista_Menu_Reservar()
+	{
+		$Bl_menu = new Bl_menu();
+		$DATA['menu']=$Bl_menu->Lista_menu();
+		return view('Reservaciones',$DATA);
+	}
+	//
 }
