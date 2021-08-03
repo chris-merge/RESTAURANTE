@@ -42,7 +42,7 @@ justify-content: space-between;
 #navegacion{
 	margin-right: 30px;
 }
-#navegacion li: last-of-type{
+#navegacion li, last-of-type{
 margin: 0;
 }
 #navegacion a:hover{
@@ -97,7 +97,7 @@ margin-right: 70px;
 	border-radius: 50px;
 	/*border: 20px solid blue;*/
 }
-//card imagenes 
+/*card imagenes */
 #imag_card{
 	width: auto;
 	height: 400px;

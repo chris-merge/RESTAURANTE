@@ -61,19 +61,23 @@
             echo '<option value="$Lista_Menu->nombre">';
             echo $Lista_Menu->nombre;
             echo "</option>";
+            echo ' <div class="input-field col s6">';
+
+            //
+            echo '<label id="Total_pagar">Total a Pagar $';
+            echo "$Precio</label>";
+            //
+            echo "</div>";
+
 				  	}				  	
              $X++;
             }
              ?>
-                     </select>
+              </select>
                </div>
-               <div class="input-field col s6">
+                <div class="input-field col s6">
                	<input type="number" min="1" max="50" id="cantidad">
                	<label for="cantidad">Cantidad</label>
-               </div>
-               <div class="input-field col s6">
-               	<label id="Total_pagar">Total a Pagar $500.00</label>
-
                </div>
 			</div>
 			<div id="Boton_contenedor">
