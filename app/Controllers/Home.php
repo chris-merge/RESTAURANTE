@@ -1,4 +1,4 @@
-<?php
+<?php  
  namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\BL_menu;
@@ -72,4 +72,9 @@ class Home extends Controller
 		return view('Reservaciones',$DATA);
 	}
 	//
+	public function RegistroUser()
+	{
+		return view('RegistroUser');
+	}
 }
+?>

@@ -34,7 +34,7 @@ public function Lista_Menu(){
 	return $results;
 }
 /*lista de menus  */
-/**
+/*
 aqui vamos a hacer la lista de la tabla bebidas
  */
 

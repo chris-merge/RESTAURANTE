@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Bienvenid@s</title>
 	<!-- Refrencias de libreria  de materialize -->
-	<link type="text/css" rel="stylesheet" href="/tutorial/css/materialize.min.css"  media="screen,projection"/>
+	<link type="text/css" rel="stylesheet" href="/tutorial/css/materialize.css"  media="screen,projection"/>
 	<!-- Refrencias de libreria  de materialize -->
     <link rel="stylesheet" type="text/css" href="/tutorial/css/materialize.min.css" media="screen,projection"/>
     <!-- link de css del estilo al index -->
@@ -57,13 +57,13 @@
     </div>
     <div id="btn">
     <button  class='btn waves-effect waves-light' type='submit'>Ingresar</button>
-    <a class="waves-effect waves-light btn" href="<?php echo base_url('/Home/Menu') ?>">Registar</a>
+    <a class="waves-effect waves-light btn" href="<?php echo base_url('/Registro_UserNew/RegistroUser') ?>">Registar</a>
     </div>
     </div>
     </form>
     </div>
     <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+
     </div>
      <!--  LOGIN -->
   </div>
